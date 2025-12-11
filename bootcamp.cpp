@@ -22,8 +22,16 @@ adrSesi createElmSesi(infoSesi data) {
 }
 
 // (a) Menambahkan bootcamp (Insert Parent)
-void insertBootcamp(List &L, adrBootcamp P) {
-
+void insertBootcamp(List &L, adrBootcamp p) {
+    if (L.first==nullptr) {
+        L.first=p;
+    } else {
+        adrBootcamp q=L.first;
+        while (q->next!=nullptr) {
+            q=q->next;
+        }
+        q->next=p;
+    }
 }
 
 // (b) & (d) Menambahkan sesi ke bootcamp tertentu

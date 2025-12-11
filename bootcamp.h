@@ -53,7 +53,7 @@ adrBootcamp createElmBootcamp(infoBootcamp data);
 adrSesi createElmSesi(infoSesi data);
 
 // (a) Menambahkan bootcamp (Insert Parent)
-void insertBootcamp(List &L, adrBootcamp P);
+void insertBootcamp(List &L, adrBootcamp p);
 
 // (b) & (d) Menambahkan sesi ke bootcamp tertentu
 void addSesiToBootcamp(List &L, string judulBootcamp, adrSesi C);
