@@ -23,7 +23,7 @@ int main() {
         if (pilihan == 1){
             cout << "--- Tambah Bootcamp ---\n";
             cout << "(Gunakan underscore '_'pengganti spasi)\n ";
-            cout << "Judul Bootcamp  :  "; cin >> dataB.judul
+            cout << "Judul Bootcamp  :  "; cin >> dataB.judul;
             cout << "Penyelenggara  :  "; cin >> dataB.penulis;
             cout << "Kategori  :  "; cin >> dataB.kategori;
 
@@ -86,7 +86,7 @@ int main() {
                 
                 
             } else if (pilihan == 9){
-                showminMaxSesi_103012400164(L);
+                showMinMaxSesi_103012400164(L);
                 
             }
             
