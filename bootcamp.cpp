@@ -92,7 +92,7 @@ void showMinMaxSesi(List L) { // might be wrong
         if (countSesi(L, p->info.namaSesi) > countSesi(L, top->info.namaSesi)) {
             top=p;
         }
-        if (countSesi(L, p->info.judul) < countSesi(L, bottom->info.namaSesi)) {
+        if (countSesi(L, p->info.namaSesi) < countSesi(L, bottom->info.namaSesi)) {
             bottom=p;
         }
         p=p->next;
