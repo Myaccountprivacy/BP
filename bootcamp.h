@@ -57,7 +57,6 @@ adrSesi createElmSesi(infoSesi data);
 void insertBootcamp(List &L, adrBootcamp P);
 
 // (b) & (d) Menambahkan sesi ke bootcamp tertentu
-// Fungsi ini sekaligus menghubungkan relasi
 void addSesiToBootcamp(List &L, string judulBootcamp, adrSesi C);
 
 
