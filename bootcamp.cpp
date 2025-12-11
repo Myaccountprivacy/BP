@@ -52,7 +52,7 @@ void addSesiToBootcamp(List &L, string judulBootcamp, adrSesi C) {
 }
 
 // (c) Mencari bootcamp tertentu berdasarkan judul
-adrBootcamp findBootcamp(List L, string judul) {
+adrBootcamp findBootcamp_103012400164(List L, string judul) {
     adrBootcamp p=L.first;
     while (p!=nullptr) {
         if (p->info.judul==judul) {
@@ -81,12 +81,50 @@ void showSesiByBootcamp(List L, string judulBootcamp) {
 // (f) Menghapus bootcamp beserta seluruh sesinya
 // Hati-hati: Harus hapus semua anak dulu baru bapaknya
 void deleteBootcamp(List &L, string judulBootcamp) {
-    
+    adrBootcamp p=findBootcamp_103012400164(L,judulBootcamp);
+    if (p!=nullptr) {
+        // Hapus semua sesi terlebih dahulu
+        adrSesi q=p->firstSesi;
+        while (q!=nullptr) {
+            adrSesi temp=q;
+            q=q->next;
+            temp=nullptr;
+        }
+        // Hapus bootcamp
+        if (p==L.first) {
+            L.first=p->next;
+        } else {
+            adrBootcamp prev=L.first;
+            while (prev->next!=p) {
+                prev=prev->next;
+            }
+            prev->next=p->next;
+        }
+        p=nullptr;
+    }
 }
 
 // (g) Menghapus sesi tertentu dari bootcamp tertentu
 void deleteSesi(List &L, string judulBootcamp, string namaSesi) {
-
+    adrBootcamp bc=findBootcamp_103012400164(L,judulBootcamp);
+    if (bc!=nullptr) {
+        adrSesi p=bc->firstSesi;
+        while (p!=nullptr && p->info.namaSesi!=namaSesi) {
+            p=p->next;
+        }
+        if (p!=nullptr) {
+            // Hapus sesi dari linked list
+            if (p->prev!=nullptr) {
+                p->prev->next=p->next;
+            } else {
+                bc->firstSesi=p->next; // Jika sesi pertama yang dihapus
+            }
+            if (p->next!=nullptr) {
+                p->next->prev=p->prev;
+            }
+            p=nullptr;
+        }
+    }
 }
 
 // (h) Menampilkan seluruh bootcamp beserta sesinya
@@ -150,7 +188,7 @@ void printMenu() {
     cout<<"4. Tampilkan Sesi berdasarkan Bootcamp\n";
     cout<<"5. Hapus Bootcamp beserta Sesi-nya\n";
     cout<<"6. Hapus Sesi dari Bootcamp\n";
-    cout<<"7. Tampilkan Semua Bootcamp beserta Sesi-nya\n";
+    cout<<"7. Tampilkan Semua Bootcamp beserta Sesinya\n";
     cout<<"8. Hitung Jumlah Sesi dalam Bootcamp\n";
     cout<<"9. Tampilkan Bootcamp dengan Sesi Terbanyak dan Paling Sedikit\n";
     cout<<"10. Keluar\n";
