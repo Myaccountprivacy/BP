@@ -6,14 +6,14 @@ void createList(List &L) {
 }
 
 // Membuat elemen baru (Alokasi memori)
-adrBootcamp createElmBootcamp(infoBootcamp data) {
+adrBootcamp createElmBootcamp_103012400164(infoBootcamp data) {
     adrBootcamp p=new elmBootcamp;
     p->info=data;
     p->next=nullptr;
     p->firstSesi=nullptr;
     return p;
 }
-adrSesi createElmSesi(infoSesi data) {
+adrSesi createElmSesi_103012400164(infoSesi data) {
     adrSesi p=new elmSesi;
     p->info=data;
     p->next=nullptr;
@@ -22,7 +22,7 @@ adrSesi createElmSesi(infoSesi data) {
 }
 
 // (a) Menambahkan bootcamp (Insert Parent)
-void insertBootcamp(List &L, adrBootcamp p) {
+void insertBootcamp_103012400164(List &L, adrBootcamp p) {
     if (L.first==nullptr) {
         L.first=p;
     } else {
@@ -35,8 +35,8 @@ void insertBootcamp(List &L, adrBootcamp p) {
 }
 
 // (b) & (d) Menambahkan sesi ke bootcamp tertentu
-void addSesiToBootcamp(List &L, string judulBootcamp, adrSesi C) {
-    adrBootcamp p=findBootcamp(L,judulBootcamp);
+void addSesiToBootcamp_103012400206(List &L, string judulBootcamp, adrSesi C) {
+    adrBootcamp p=findBootcamp_103012400164(L,judulBootcamp);
     if (p!=nullptr) {
         if (p->firstSesi==nullptr) {
             p->firstSesi=C;
@@ -64,8 +64,8 @@ adrBootcamp findBootcamp_103012400164(List L, string judul) {
 }
 
 // (e) Menampilkan sesi berdasarkan bootcamp tertentu
-void showSesiByBootcamp(List L, string judulBootcamp) {
-    adrBootcamp bc=findBootcamp(L,judulBootcamp);
+void showSesiByBootcamp_103012400164(List L, string judulBootcamp) {
+    adrBootcamp bc=findBootcamp_103012400164(L,judulBootcamp);
     adrSesi p=bc->firstSesi;
     if (bc!=nullptr) {
         cout<<"Sesi pada bootcamp "<<judulBootcamp<<":\n";
@@ -80,7 +80,7 @@ void showSesiByBootcamp(List L, string judulBootcamp) {
 
 // (f) Menghapus bootcamp beserta seluruh sesinya
 // Hati-hati: Harus hapus semua anak dulu baru bapaknya
-void deleteBootcamp(List &L, string judulBootcamp) {
+void deleteBootcamp_103012400206(List &L, string judulBootcamp) {
     adrBootcamp p=findBootcamp_103012400164(L,judulBootcamp);
     if (p!=nullptr) {
         // Hapus semua sesi terlebih dahulu
@@ -105,7 +105,7 @@ void deleteBootcamp(List &L, string judulBootcamp) {
 }
 
 // (g) Menghapus sesi tertentu dari bootcamp tertentu
-void deleteSesi(List &L, string judulBootcamp, string namaSesi) {
+void deleteSesi_103012400206(List &L, string judulBootcamp, string namaSesi) {
     adrBootcamp bc=findBootcamp_103012400164(L,judulBootcamp);
     if (bc!=nullptr) {
         adrSesi p=bc->firstSesi;
@@ -147,9 +147,9 @@ void showAll(List L) {
 }
 
 // (i) Menghitung jumlah sesi dalam bootcamp tertentu
-int countSesi(List L, string judulBootcamp) {
+int countSesi_103012400164(List L, string judulBootcamp) {
     int tally=0;
-    adrBootcamp bc=findBootcamp(L, judulBootcamp);
+    adrBootcamp bc=findBootcamp_103012400164(L, judulBootcamp);
     adrSesi p=L.first->firstSesi;
     if (bc!=nullptr) {
         while (p!=nullptr) {
@@ -161,22 +161,22 @@ int countSesi(List L, string judulBootcamp) {
 }
 
 // (j) Menampilkan bootcamp dengan sesi terbanyak dan paling sedikit
-void showMinMaxSesi(List L) { // might be wrong
+void showMinMaxSesi_103012400164(List L) { // might be wrong
     //adrBootcamp bc=findBootcamp(L, L.first->info.judul);
     adrBootcamp p=L.first;
     adrBootcamp top=p;
     adrBootcamp bottom=p;
     while (p!=nullptr) {
-        if (countSesi(L,p->info.judul)>countSesi(L,top->info.judul)) {
+        if (countSesi_103012400164(L,p->info.judul)>countSesi_103012400164(L,top->info.judul)) {
             top=p;
         }
-        if (countSesi(L,p->info.judul)<countSesi(L,bottom->info.judul)) {
+        if (countSesi_103012400164(L,p->info.judul)<countSesi_103012400164(L,bottom->info.judul)) {
             bottom=p;
         }
         p=p->next;
     }
-    cout<<"Bootcamp dengan sesi terbanyak: "<<top->info.judul<<" ("<<countSesi(L, top->info.judul)<<" sesi)"<<endl;
-    cout<<"Bootcamp dengan sesi paling sedikit: "<<bottom->info.judul<<" ("<<countSesi(L, bottom->info.judul)<<" sesi)"<<endl;
+    cout<<"Bootcamp dengan sesi terbanyak: "<<top->info.judul<<" ("<<countSesi_103012400164(L, top->info.judul)<<" sesi)"<<endl;
+    cout<<"Bootcamp dengan sesi paling sedikit: "<<bottom->info.judul<<" ("<<countSesi_103012400164(L, bottom->info.judul)<<" sesi)"<<endl;
 }
 
 // Helper untuk menu (k)

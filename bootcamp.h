@@ -49,36 +49,36 @@ struct List {
 void createList(List &L);
 
 // Membuat elemen baru (Alokasi memori)
-adrBootcamp createElmBootcamp(infoBootcamp data);
-adrSesi createElmSesi(infoSesi data);
+adrBootcamp createElmBootcamp_103012400164(infoBootcamp data);
+adrSesi createElmSesi_103012400164(infoSesi data);
 
 // (a) Menambahkan bootcamp (Insert Parent)
-void insertBootcamp(List &L, adrBootcamp p);
+void insertBootcamp_103012400164(List &L, adrBootcamp p);
 
 // (b) & (d) Menambahkan sesi ke bootcamp tertentu
-void addSesiToBootcamp(List &L, string judulBootcamp, adrSesi C);
+void addSesiToBootcamp_103012400206(List &L, string judulBootcamp, adrSesi C);
 
 // (c) Mencari bootcamp tertentu berdasarkan judul
-adrBootcamp findBootcamp(List L, string judul);
+adrBootcamp findBootcamp_103012400164(List L, string judul);
 
 // (e) Menampilkan sesi berdasarkan bootcamp tertentu
-void showSesiByBootcamp(List L, string judulBootcamp);
+void showSesiByBootcamp_103012400164(List L, string judulBootcamp);
 
 // (f) Menghapus bootcamp beserta seluruh sesinya
 // Hati-hati: Harus hapus semua anak dulu baru bapaknya
-void deleteBootcamp(List &L, string judulBootcamp);
+void deleteBootcamp_103012400206(List &L, string judulBootcamp);
 
 // (g) Menghapus sesi tertentu dari bootcamp tertentu
-void deleteSesi(List &L, string judulBootcamp, string namaSesi);
+void deleteSesi_103012400206(List &L, string judulBootcamp, string namaSesi);
 
 // (h) Menampilkan seluruh bootcamp beserta sesinya
 void showAll(List L);
 
 // (i) Menghitung jumlah sesi dalam bootcamp tertentu
-int countSesi(List L, string judulBootcamp);
+int countSesi_103012400164(List L, string judulBootcamp);
 
 // (j) Menampilkan bootcamp dengan sesi terbanyak dan paling sedikit
-void showMinMaxSesi(List L);
+void showMinMaxSesi_103012400164(List L);
 
 // Helper untuk menu (k)
 void printMenu();
