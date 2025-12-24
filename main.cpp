@@ -38,6 +38,8 @@ int main() {
                 cout<<"Kesulitan:  : "; cin>>dataS.kesulitan;
                 pS= createElmSesi_103012400164(dataS);
                 addSesiToBootcamp_103012400206(L, judulCari, pS); 
+            } else {
+                cout<<"Bootcamp dengan nama "<<judulCari<<" tidak ditemukan.\n\n";
             }
             cout << "Sesi berhasil ditambahkan ke bootcamp.\n\n";
         } else if (pilihan == 3) {
@@ -55,9 +57,9 @@ int main() {
             string judulCari3;
             cout<<"Bootcamp yang dicari : "; cin>>judulCari3;
             showSesiByBootcamp_103012400164(L, judulCari3);
-            cout << "\nTekan Enter untuk kembali ke menu...";
+            /*cout << "\nTekan Enter untuk kembali ke menu...";
             cin.ignore();
-            cin.get();    
+            cin.get();*/    
         } else if (pilihan == 5){
             cout << "--- Hapus Bootcamp beserta sesinya ---\n";
             string judulCari4;

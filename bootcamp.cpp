@@ -97,9 +97,13 @@ void showSesiByBootcamp_103012400164(List L, string judulBootcamp) {
     if (bc!=nullptr) {
         cout<<"Sesi pada bootcamp "<<judulBootcamp<<":\n";
         adrSesi p=bc->firstSesi;
-        while (p!=nullptr) {
-            cout<<"- "<<p->info.namaSesi<<" | Durasi: "<<p->info.durasi<<" jam | Kesulitan: "<<p->info.kesulitan<<"\n";
-            p=p->next;
+        if (p==nullptr) {
+            cout<<"  (Tidak ada sesi)\n";
+        } else {
+            while (p!=nullptr) {
+                cout<<"- "<<p->info.namaSesi<<" | Durasi: "<<p->info.durasi<<" jam | Kesulitan: "<<p->info.kesulitan<<"\n";
+                p=p->next;
+            }
         }
     } else {
         cout<<"Bootcamp dengan nama "<<judulBootcamp<<" tidak ditemukan.\n";
