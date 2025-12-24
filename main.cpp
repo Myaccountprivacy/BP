@@ -35,7 +35,7 @@ int main() {
             if (findBootcamp_103012400164(L, judulCari) != nullptr ) {
                 cout<<"Nama sesi   : "; cin>>dataS.namaSesi;
                 cout<<"Durasi (jam): "; cin>>dataS.durasi;
-                cout<<"kesulitan:  : "; cin>>dataS.kesulitan;
+                cout<<"Kesulitan:  : "; cin>>dataS.kesulitan;
                 pS= createElmSesi_103012400164(dataS);
                 addSesiToBootcamp_103012400206(L, judulCari, pS); 
             } 
