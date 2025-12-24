@@ -231,7 +231,7 @@ void showMinMaxSesi_103012400164(List L) { // might be wrong
 void printMenu() {
 /*
     I.S. -
-    F.S. Menampilkan menu pilihan kepada user
+    F.S. Menampilkan menu pilihan kepada pengguna
 */
     cout<<"=== Menu Bootcamp Management ===\n";
     cout<<"1. Tambah Bootcamp\n";
