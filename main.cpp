@@ -15,7 +15,7 @@ int main() {
 
     while (pilihan != 10){
         printMenu();
-        cout << "\n\nMasukkan pilihan  : ";
+        cout << "\nMasukkan pilihan  : ";
         cin >> pilihan;
 
         cout << "\n";
@@ -25,7 +25,7 @@ int main() {
             cout<<"(Gunakan underscore '_' sebagai pengganti spasi).\n";
             cout<<"Judul Bootcamp\t\t: "; cin>>dataB.judul;
             cout<<"Penyelenggara\t\t: "; cin>>dataB.penulis;
-            cout<<"Kategori\t\t\t: "; cin>>dataB.kategori;
+            cout<<"Kategori\t\t: "; cin>>dataB.kategori;
             pB = createElmBootcamp_103012400164(dataB);
             insertBootcamp_103012400164(L, pB);
             cout << "Bootcamp berhasil didaftarkan.\n\n";
