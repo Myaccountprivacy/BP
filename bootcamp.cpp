@@ -227,8 +227,8 @@ void showMinMaxSesi_103012400164(List L) { // might be wrong
         }
         p=p->next;
     }
-    cout<<"Bootcamp dengan sesi terbanyak: "<<top->info.judul<<" ("<<countSesi_103012400164(L, top->info.judul)<<" sesi)"<<endl;
-    cout<<"Bootcamp dengan sesi paling sedikit: "<<bottom->info.judul<<" ("<<countSesi_103012400164(L, bottom->info.judul)<<" sesi)"<<endl;
+    cout<<"Bootcamp dengan sesi terbanyak: "<<top->info.judul<<" ("<<countSesi_103012400164(L, top->info.judul)<<" sesi)\n";
+    cout<<"Bootcamp dengan sesi paling sedikit: "<<bottom->info.judul<<" ("<<countSesi_103012400164(L, bottom->info.judul)<<" sesi)\n";
 }
 
 // Helper untuk menu (k)
