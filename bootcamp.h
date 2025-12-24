@@ -80,7 +80,7 @@ int countSesi_103012400164(List L, string judulBootcamp);
 // (j) Menampilkan bootcamp dengan sesi terbanyak dan paling sedikit
 void showMinMaxSesi_103012400164(List L);
 
-// Helper untuk menu (k)
+// Function helper untuk menu (k)
 void printMenu();
 
 #endif // BOOTCAMP_H_INCLUDED
