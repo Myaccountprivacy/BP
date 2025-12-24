@@ -198,8 +198,8 @@ int countSesi_103012400164(List L, string judulBootcamp) {
 */
     int tally=0;
     adrBootcamp bc=findBootcamp_103012400164(L, judulBootcamp);
-    adrSesi p=L.first->firstSesi;
     if (bc!=nullptr) {
+        adrSesi p=bc->firstSesi;
         while (p!=nullptr) {
             tally++;
             p=p->next;
