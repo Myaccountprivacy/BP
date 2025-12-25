@@ -1,38 +1,46 @@
 IF PILIHAN==1
+1
 gazoo_racing
 toyota
 motorsports
 
+1
 pratt_miller_motorsports
 general_motors
 motorsports
 
+1
 scuderia_ferrari
 ferrari
 motorsports
 
 
 IF PILIHAN==2
+2
 gazoo_racing
 world_endurance_championship
 24
 advanced
 
+2
 gazoo_racing
 world_rally_championship
 2
 advanced
 
+2
 gazoo_racing
 gt_world_challenge_asia
 3
 beginner
 
+2
 pratt_miller_motorsports
 imsa_sportscar_championship
 24
 intermediate
 
+2
 scuderia_ferrari
 formula_1
 3
@@ -40,27 +48,35 @@ advanced
 
 
 IF PILIHAN==3
+3
 gazoo_racing
 
+3
 arrow_mclaren
 
 
 IF PILIHAN==4
+4
 pratt_miller_motorsports
 
+4
 m_sport_ford_wrt
 
 
 IF PILIHAN==5
+5
 scuderia_ferrari
 
+5
 mercedes_amg
 
 
 IF PILIHAN==6
+6
 gazoo_racing
 world_rally_championship
 
 
 IF PILIHAN==8
+8
 pratt_miller_motorsports
