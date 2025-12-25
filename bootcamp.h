@@ -62,7 +62,7 @@ void addSesiToBootcamp_103012400206(List &L, string judulBootcamp, adrSesi C);
 adrBootcamp findBootcamp_103012400164(List L, string judul);
 
 // (e) Menampilkan sesi berdasarkan bootcamp tertentu
-void showSesiByBootcamp_103012400164(List L, string judulBootcamp);
+void showSesiByBootcamp_103012400206(List L, string judulBootcamp);
 
 // (f) Menghapus bootcamp beserta seluruh sesinya
 // Hati-hati: Harus hapus semua anak dulu baru bapaknya
@@ -75,7 +75,7 @@ void deleteSesi_103012400206(List &L, string judulBootcamp, string namaSesi);
 void showAll(List L);
 
 // (i) Menghitung jumlah sesi dalam bootcamp tertentu
-int countSesi_103012400164(List L, string judulBootcamp);
+int countSesi_103012400206(List L, string judulBootcamp);
 
 // (j) Menampilkan bootcamp dengan sesi terbanyak dan paling sedikit
 void showMinMaxSesi_103012400164(List L);

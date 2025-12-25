@@ -56,7 +56,7 @@ int main() {
             cout << "--- Tampilkan Sesi Bootcamp ---\n";
             string judulCari3;
             cout<<"Bootcamp yang dicari : "; cin>>judulCari3;
-            showSesiByBootcamp_103012400164(L, judulCari3);
+            showSesiByBootcamp_103012400206(L, judulCari3);
             /*cout << "\nTekan Enter untuk kembali ke menu...";
             cin.ignore();
             cin.get();*/    
@@ -82,7 +82,7 @@ int main() {
             cout<<"--- Hitung Jumlah Sesi dalam Bootcamp ---\n";
             string judulCari6;
             cout << "Nama Bootcamp : "; cin >> judulCari6;
-            cout << countSesi_103012400164(L, judulCari6) << "\n\n";        
+            cout << countSesi_103012400206(L, judulCari6) << "\n\n";        
         } else if (pilihan == 9){
             cout<<"--- Tampilkan Bootcamp dengan Jumlah Sesi Terbanyak dan Tersedikit ---\n";
             showMinMaxSesi_103012400164(L);
