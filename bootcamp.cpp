@@ -1,6 +1,5 @@
 #include "bootcamp.h"
 
-// Membuat List kosong (List Parent)
 void createList(List &L) {
 /*
     I.S. Tidak ada list
@@ -9,7 +8,6 @@ void createList(List &L) {
     L.first=nullptr;
 }
 
-// Membuat elemen baru (Alokasi memori)
 adrBootcamp createElmBootcamp_103012400164(infoBootcamp data) {
 /*
     I.S. Data terdefinisi
@@ -21,6 +19,7 @@ adrBootcamp createElmBootcamp_103012400164(infoBootcamp data) {
     p->firstSesi=nullptr;
     return p;
 }
+
 adrSesi createElmSesi_103012400164(infoSesi data) {
 /*
     I.S. Data terdefinisi
@@ -33,7 +32,6 @@ adrSesi createElmSesi_103012400164(infoSesi data) {
     return p;
 }
 
-// (a) Menambahkan bootcamp (Insert Parent)
 void insertBootcamp_103012400164(List &L, adrBootcamp p) {
 /*
     I.S. List mungkin kosong
@@ -50,7 +48,6 @@ void insertBootcamp_103012400164(List &L, adrBootcamp p) {
     }
 }
 
-// (b) & (d) Menambahkan sesi ke bootcamp tertentu
 void addSesiToBootcamp_103012400206(List &L, string judulBootcamp, adrSesi C) {
 /*
     I.S. List sesi suatu bootcamp mungkin kosong
@@ -71,7 +68,6 @@ void addSesiToBootcamp_103012400206(List &L, string judulBootcamp, adrSesi C) {
     }
 }
 
-// (c) Mencari bootcamp tertentu berdasarkan judul
 adrBootcamp findBootcamp_103012400164(List L, string judul) {
 /*
     I.S. List mungkin kosong
@@ -87,7 +83,6 @@ adrBootcamp findBootcamp_103012400164(List L, string judul) {
     return nullptr;
 }
 
-// (e) Menampilkan sesi berdasarkan bootcamp tertentu
 void showSesiByBootcamp_103012400206(List L, string judulBootcamp) {
 /*
     I.S. List mungkin kosong
@@ -110,8 +105,6 @@ void showSesiByBootcamp_103012400206(List L, string judulBootcamp) {
     }
 }
 
-// (f) Menghapus bootcamp beserta seluruh sesinya
-// Hati-hati: Harus hapus semua anak dulu baru bapaknya
 void deleteBootcamp_103012400206(List &L, string judulBootcamp) {
 /*
     I.S. List mungkin kosong
@@ -142,7 +135,6 @@ void deleteBootcamp_103012400206(List &L, string judulBootcamp) {
     }
 }
 
-// (g) Menghapus sesi tertentu dari bootcamp tertentu
 void deleteSesi_103012400206(List &L, string judulBootcamp, string namaSesi) {
 /*
     I.S. List mungkin kosong
@@ -171,7 +163,6 @@ void deleteSesi_103012400206(List &L, string judulBootcamp, string namaSesi) {
     }
 }
 
-// (h) Menampilkan seluruh bootcamp beserta sesinya
 void showAll(List L) {
 /*
     I.S. List mungkin kosong
@@ -194,7 +185,6 @@ void showAll(List L) {
     }
 }
 
-// (i) Menghitung jumlah sesi dalam bootcamp tertentu
 int countSesi_103012400206(List L, string judulBootcamp) {
 /*
     I.S. List mungkin kosong
@@ -212,7 +202,6 @@ int countSesi_103012400206(List L, string judulBootcamp) {
     return tally;
 }
 
-// (j) Menampilkan bootcamp dengan sesi terbanyak dan paling sedikit
 void showMinMaxSesi_103012400164(List L) { // might be wrong
 /*
     I.S. List mungkin kosong
@@ -235,7 +224,6 @@ void showMinMaxSesi_103012400164(List L) { // might be wrong
     cout<<"Bootcamp dengan sesi paling sedikit: "<<bottom->info.judul<<" ("<<countSesi_103012400206(L, bottom->info.judul)<<" sesi)\n";
 }
 
-// Helper untuk menu (k)
 void printMenu() {
 /*
     I.S. -
