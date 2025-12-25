@@ -195,7 +195,7 @@ void showAll(List L) {
 }
 
 // (i) Menghitung jumlah sesi dalam bootcamp tertentu
-int countSesi_1030124002206(List L, string judulBootcamp) {
+int countSesi_103012400206(List L, string judulBootcamp) {
 /*
     I.S. List mungkin kosong
     F.S. Mengembalikan jumlah sesi dalam bootcamp dengan judul tertentu
@@ -226,7 +226,7 @@ void showMinMaxSesi_103012400164(List L) { // might be wrong
         if (countSesi_103012400206(L,p->info.judul)>countSesi_103012400206(L,top->info.judul)) {
             top=p;
         }
-        if (countSesi_1030124002206(L,p->info.judul)<countSesi_103012400206(L,bottom->info.judul)) {
+        if (countSesi_103012400206(L,p->info.judul)<countSesi_103012400206(L,bottom->info.judul)) {
             bottom=p;
         }
         p=p->next;
